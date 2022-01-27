@@ -1,14 +1,13 @@
 import React,{useContext,useState} from 'react';
 import { View, Text, Image, ScrollView} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import StarRating from 'react-native-star-rating-widget';
-import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import TopHeader from '../components/TopHeader';
 import BottomHeader from '../components/BottomHeader';
 import Breadcrump from '../components/Breadcrumb';
 import { ProductStyles, Buttons} from '../styles/Index'; 
 import {Context}  from '../context/Store';
 import { Colors } from '../styles/Colors';
+import CollapseView from '../components/CollapseView';
 
 const ProductScreen = () =>  {
 
@@ -58,32 +57,9 @@ const ProductScreen = () =>  {
                 <View style={ProductStyles.productDetailsCo}>
                     
                     <View>
-                        <Collapse style={{height:200}}>
-                            <CollapseHeader>
-                                <View>
-                                    <Text>Description</Text>
-                                </View>
-                            </CollapseHeader>
-                            <CollapseBody>
-                                <Text>Not available</Text>
-                            </CollapseBody>
-                            <CollapseHeader>
-                                <View>
-                                    <Text>Product Reviews</Text>
-                                </View>
-                            </CollapseHeader>
-                            <CollapseBody>
-                                <Text>Not available</Text>
-                            </CollapseBody>
-                            <CollapseHeader>
-                                <View>
-                                    <Text>Shipping and returns</Text>
-                                </View>
-                            </CollapseHeader>
-                            <CollapseBody>
-                                <Text>Not available</Text>
-                            </CollapseBody>
-                        </Collapse>
+                       <CollapseView heading="Description" content="Not available" active={true}/>
+                       <CollapseView heading="Product Reviews" content="Not available" active={false}/>
+                       <CollapseView heading="Shipping and returns" content="Not available" active={false}/>
                     </View>
 
                     <View style={ProductStyles.knowYourSellerWrapper}>

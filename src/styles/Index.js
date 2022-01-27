@@ -211,7 +211,8 @@ const ProductStyles = StyleSheet.create({
     knowYourSellerWrapper:{
         backgroundColor:Colors.WHITE,
         borderRadius:10,
-        padding:20
+        padding:20,
+        marginTop:30
     },
     knowSellerHeader:{
         fontWeight:"bold",
@@ -270,5 +271,20 @@ const otherStyles = StyleSheet.create({
     }
 })
 
+const CollapseViewStyle =  StyleSheet.create({
+    wrapper:{
+       flexDirection:"row",
+       justifyContent:"space-between",
+       borderBottomColor:Colors.TEXT_COLOR,
+       borderBottomWidth:1
+    },
+    heading:{
+        fontSize:17,
+        color:Colors.TEXT_COLOR,
+        fontWeight:"bold",
+        marginTop:25,
+    }
+})
 
-export { Header, ProductStyles, Buttons, otherStyles, CartStyles}
+
+export { Header, ProductStyles, Buttons, otherStyles, CartStyles, CollapseViewStyle}
